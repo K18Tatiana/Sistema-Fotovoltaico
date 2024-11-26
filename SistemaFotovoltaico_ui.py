@@ -726,7 +726,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -737,7 +737,7 @@ class Ui_MainWindow(object):
         __sortingEnabled = self.tableWidget.isSortingEnabled()
         self.tableWidget.setSortingEnabled(False)
         item = self.tableWidget.item(0, 0)
-        item.setText(_translate("MainWindow", "CARGAS INDIVIDUALES"))
+        item.setText(_translate("MainWindow", "NOMBRE"))
         item = self.tableWidget.item(0, 1)
         item.setText(_translate("MainWindow", "CANTIDAD"))
         item = self.tableWidget.item(0, 2)
