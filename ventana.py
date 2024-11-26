@@ -154,13 +154,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 valor = float(valor_celda)
 
                 if valor <= 0 or (col == 3 and valor <= 0) or (col == 3 and valor > 24) or (col == 4 and valor <= 0) or (col == 4 and valor > 7):
-                    QMessageBox.warning(self, "Error", "Por favor ingresa un número válido.")
+                    QMessageBox.warning(self, "Error", "Por favor, ingrese un número válido.")
                     # Restablecemos el valor de la celda
                     self.tableWidget.item(row, col).setText("")
 
         except ValueError:
             # Si hay un error en la conversión (no es un número válido), mostramos un mensaje de error
-            QMessageBox.warning(self, "Error", "Por favor ingresa un número válido.")
+            QMessageBox.warning(self, "Error", "Por favor, ingrese un número válido.")
             # Restablecemos el valor de la celda
             self.tableWidget.item(row, col).setText("")
 
@@ -270,7 +270,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.setearEntradaInterfaz2(numeroEntrada)
     
     def setearEntradaInterfaz2(self, entrada):
-        QMessageBox.warning(self, "Error", "Por favor ingresa un número válido.")
+        QMessageBox.warning(self, "Error", "Por favor, ingrese un número válido.")
         if entrada == 1:
             self.lineEdit_eficienciaInversor.setText("")
         elif entrada == 2:
@@ -293,7 +293,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             factorDescarga = float(self.lineEdit_factorDescarga.text()) / 100
             voltajeBateria = float(self.lineEdit_voltajeBateria.text())
         except:
-            QMessageBox.warning(self, "Error", "Por favor ingrese todos los valores.")
+            QMessageBox.warning(self, "Error", "Por favor, ingrese todos los valores.")
             return
 
         ah_dia = demandaEnergia / eficienciaInversor / voltajeSistema
@@ -367,7 +367,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.setearEntradaInterfaz3(numeroEntrada)
 
     def setearEntradaInterfaz3(self, entrada):
-        QMessageBox.warning(self, "Error", "Por favor ingresa un número válido.")
+        QMessageBox.warning(self, "Error", "Por favor, ingrese un número válido.")
         if entrada == 1:
             self.lineEdit_eficienciaInversor_2.setText("")
         elif entrada == 2:
@@ -393,7 +393,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             voltajeModulo = float(self.lineEdit_voltajeModulo.text())
             cortocircuitoModulo = float(self.lineEdit_cortocircuitoModulo.text())
         except:
-            QMessageBox.warning(self, "Error", "Por favor ingrese todos los valores.")
+            QMessageBox.warning(self, "Error", "Por favor, ingrese todos los valores.")
             return
 
         ah_dia = demandaEnergia / eficienciaInversor / voltajeSistema
