@@ -56,7 +56,7 @@ QLineEdit {
      <number>0</number>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_1">
      <widget class="QLabel" name="label_titulo">
@@ -1361,7 +1361,7 @@ QLineEdit:hover {
        <rect>
         <x>70</x>
         <y>190</y>
-        <width>251</width>
+        <width>281</width>
         <height>31</height>
        </rect>
       </property>
@@ -1371,7 +1371,7 @@ QLineEdit:hover {
 }</string>
       </property>
       <property name="text">
-       <string>Eficiencia de la batería (%):</string>
+       <string>Eficiencia de las baterías (%):</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_panelesSerie">

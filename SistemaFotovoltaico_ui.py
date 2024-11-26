@@ -595,7 +595,7 @@ class Ui_MainWindow(object):
         self.label_panelesParalelo.setText("")
         self.label_panelesParalelo.setObjectName("label_panelesParalelo")
         self.label_eficienciaBateria = QtWidgets.QLabel(self.page_3)
-        self.label_eficienciaBateria.setGeometry(QtCore.QRect(70, 190, 251, 31))
+        self.label_eficienciaBateria.setGeometry(QtCore.QRect(70, 190, 281, 31))
         self.label_eficienciaBateria.setStyleSheet("QLabel {\n"
 "    font-size: 20px;\n"
 "}")
@@ -726,7 +726,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -775,7 +775,7 @@ class Ui_MainWindow(object):
         self.pushButton_volver.setText(_translate("MainWindow", "VOLVER"))
         self.label_tituloSistemaFotovoltaico.setText(_translate("MainWindow", "SISTEMA FOTOVOLTAICO"))
         self.label_cortocircuitoModulo.setText(_translate("MainWindow", "Cortocircuito del módulo (A):"))
-        self.label_eficienciaBateria.setText(_translate("MainWindow", "Eficiencia de la batería (%):"))
+        self.label_eficienciaBateria.setText(_translate("MainWindow", "Eficiencia de las baterías (%):"))
         self.label_tituloTotalPaneles.setText(_translate("MainWindow", "Número total de paneles:"))
         self.label_tituloPotenciaInversor.setText(_translate("MainWindow", "Potencia total del inversor:"))
         self.label_corrientePicoModulo.setText(_translate("MainWindow", "Corriente pico por módulo (A):"))
