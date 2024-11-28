@@ -21,7 +21,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Layout principal
         self.layout = QtWidgets.QVBoxLayout(self.centralwidget)
 
-        # Índices de las celdas que queremos bloquear: columnas 0 y 5, y fila 0
+        # Índices de las celdas que queremos bloquear: columna 5, y fila 0
         blocked_cells = [(0, col) for col in range(self.tableWidget.columnCount())]
 
         # Bloquear celdas especificadas
@@ -52,7 +52,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Verificar que las celdas de los datos tengan números
         self.tableWidget.cellChanged.connect(self.verificarNumeroEnCelda)
 
-        # Verificar que las celdas estén llenes y posteriormente realizar el calculo de demanda
+        # Verificar que las celdas estén llenes y posteriormente realizar el cálculo de demanda
         self.pushButton_calcularDemanda.clicked.connect(self.verificarCeldasLlenas)
 
         # Banco de baterías
@@ -112,7 +112,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def ocultarLabels(self):
         """ Primera Interfaz """
         self.stackedWidget.setCurrentIndex(0)
-        # Ocultar columa 5 (watts consumidos)
+        # Ocultar columna 5 (watts consumidos)
         self.tableWidget.setColumnHidden(5, True)
 
         # Ocultar los labels y botones
@@ -201,11 +201,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
             # Demanda de energía
             demandaEnergia += wattsConsumidos
-            self.label_consumoPromedio.setText(str(round(demandaEnergia)) + " Wh")
 
             # Demanda de potencia
             demandaPotencia += wattsTotales
-            self.label_wattsTotales.setText(str(round(demandaPotencia)))
+        
+        self.label_consumoPromedio.setText(str(round(demandaEnergia)) + " Wh")
+        self.label_wattsTotales.setText(str(round(demandaPotencia)))
 
     def mostrarItemsOcultosInterfaz1(self):
         # Mostrar nuevamente la columna 5, de los Watts consumidos
