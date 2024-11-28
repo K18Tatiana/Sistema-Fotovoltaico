@@ -127,13 +127,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pushButton_calcularBaterias.setVisible(False)
         self.pushButton_calcularSistemaFotovoltaico.setVisible(False)
 
-        """ Segunda Interfaz """
-        self.label_tituloAh.setVisible(False)
-        self.label_tituloWh.setVisible(False)
-        self.label_tituloParalelo.setVisible(False)
-        self.label_tituloSerie.setVisible(False)
-        self.label_tituloTotal.setVisible(False)
-
     # Función para validar que los valores sean números
     def verificarNumeroEnCelda(self, row, col):
         item = self.tableWidget.item(row, col)
@@ -239,7 +232,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.label_tituloTotal.setVisible(False)
         self.label_capacidadTotalAh.setVisible(False)
         self.label_capacidadTotalWh.setVisible(False)
-        self.label_bateriasTotales.setVisible(False)
+        self.label_bateriasSerie.setVisible(False)
         self.label_bateriasParalelo.setVisible(False)
         self.label_bateriasTotales.setVisible(False)
 
@@ -317,7 +310,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.label_tituloTotal.setVisible(True)
         self.label_capacidadTotalAh.setVisible(True)
         self.label_capacidadTotalWh.setVisible(True)
-        self.label_bateriasTotales.setVisible(True)
+        self.label_bateriasSerie.setVisible(True)
         self.label_bateriasParalelo.setVisible(True)
         self.label_bateriasTotales.setVisible(True)
 
