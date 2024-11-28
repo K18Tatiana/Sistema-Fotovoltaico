@@ -726,7 +726,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -747,7 +747,7 @@ class Ui_MainWindow(object):
         item = self.tableWidget.item(0, 4)
         item.setText(_translate("MainWindow", "DÍAS DE USO/SEMANA"))
         item = self.tableWidget.item(0, 5)
-        item.setText(_translate("MainWindow", "WATTS CONSUMIDOS"))
+        item.setText(_translate("MainWindow", "ENERGÍA CONSUMIDA"))
         self.tableWidget.setSortingEnabled(__sortingEnabled)
         self.label_enunciado.setText(_translate("MainWindow", "Ingrese el número de cargas que desea calcular:"))
         self.label_rta1.setText(_translate("MainWindow", "WATTS TOTALES CONECTADOS:"))
